@@ -30,14 +30,16 @@ Using **teleop**
 rosrun turtlebot3_teleop turtlebot3_teleop_key
 ```
 
-Using the topic **/cmd_vel**
+Publishing to the topic **/cmd_vel**
 
-Sample subscriber code
+Sample publisher code
  
 
 ## Sensing the surroundings
 
-Using the topic **/scan**
+Subscribing to the topic **/scan**
+
+Sample subscriber code
 
 
 ## Create a World in Gazebo
