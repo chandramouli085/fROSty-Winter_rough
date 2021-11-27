@@ -2,7 +2,9 @@
 
 ## Launching Turtlebot3 in Gazebo
 
-  roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+```
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+```
 
 ## Moving the bot around
 
