@@ -10,6 +10,12 @@ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
 ## Moving the bot around
 
+Using **teleop**
+
+```
+rosrun turtlebot3_teleop turtlebot3_teleop_key
+```
+
 ## Sensing the surroundings
 
 ## Create a World in Gazebo
