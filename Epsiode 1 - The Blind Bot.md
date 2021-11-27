@@ -16,8 +16,11 @@ Using **teleop**
 rosrun turtlebot3_teleop turtlebot3_teleop_key
 ```
 
+Using the topic **/cmd_vel**
+
 ## Sensing the surroundings
 
+Using the topic **/scan**
 
 
 ## Create a World in Gazebo
