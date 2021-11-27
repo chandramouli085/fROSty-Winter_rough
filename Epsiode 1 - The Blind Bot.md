@@ -2,10 +2,16 @@
 
 ## Launching Turtlebot3 in Gazebo
 
-In **ROS Melodic**
+To summon the turtlebot in an **empty world**
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+```
+
+To summon the turtlebot in the **standard environment**
+
+```
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 
 ## Moving the bot around
@@ -17,6 +23,9 @@ rosrun turtlebot3_teleop turtlebot3_teleop_key
 ```
 
 Using the topic **/cmd_vel**
+
+Sample subscriber code
+ 
 
 ## Sensing the surroundings
 
