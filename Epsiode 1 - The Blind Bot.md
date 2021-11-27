@@ -14,6 +14,14 @@ To summon the turtlebot in the **standard environment**
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
 
+## Visualizing the Turtlebot3 and the environment in Rviz
+
+After launching the bot in Gazebo, run the following command
+
+```
+roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
+```
+
 ## Moving the bot around
 
 Using **teleop**
