@@ -2,7 +2,7 @@
 
 ## Launching Turtlebot3 in Gazebo
 
-In ROS Melodic 
+In **ROS Melodic**
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
@@ -17,6 +17,8 @@ rosrun turtlebot3_teleop turtlebot3_teleop_key
 ```
 
 ## Sensing the surroundings
+
+
 
 ## Create a World in Gazebo
 
