@@ -32,7 +32,7 @@ rosrun turtlebot3_teleop turtlebot3_teleop_key
 
 Publishing to the topic **/cmd_vel**
 
-Sample publisher code
+Sample publisher code to make the bot move in a circular path in an anticlockwise manner
  
 
 ## Sensing the surroundings
