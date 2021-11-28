@@ -1,5 +1,9 @@
 # Episode 1 - The Blind Bot
 
+## Reference
+
+[Reference](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+
 ## Launching Turtlebot3 in Gazebo
 
 To summon the turtlebot in an **empty world**
