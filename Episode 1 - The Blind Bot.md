@@ -12,9 +12,9 @@ Pictures of Gazebo, Rviz and TurtleBot3
 
 ## Rviz ...
 
-## The Turtlebot3 emerges ...
+## The TurtleBot3 emerges ...
 
-## Installing Turtlebot3
+## Installing TurtleBot3
 
 To install the TurtleBot3, execute the following command
 
@@ -53,11 +53,12 @@ After launching the bot in Gazebo, to visualize it in **Rviz**, run the followin
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 ```
 
-If the bot is in the standard world, you should be able to see the point cloud representing the objects detected by the bot. Amazing !
+If the bot is in the standard world, you should be able to see the **point cloud** representing the objects detected by the bot. Amazing !
 
 
 ## Moving the bot around
 
+Let's move the bot around using the ```turtlebot3_telop``` package
 Using **teleop**
 
 ```
