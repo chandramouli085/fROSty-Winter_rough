@@ -23,11 +23,6 @@ sudo apt-get install ros-<Version>-rviz
 ```
 Version = ```kinetic```, ```melodic```, ```noetic```
 
-Upon execution, the following screen should appear.
-
-<img src="Images/Rviz screen.png" width=600 height=400>
-
-
 ### Starting Rviz
 
 Ensure that ```roscore``` is running in a separate tab. Then execute the following command,
@@ -35,6 +30,9 @@ Ensure that ```roscore``` is running in a separate tab. Then execute the followi
 ```
 rosrun rviz rviz
 ```
+Upon execution, the following screen should appear.
+
+<img src="Images/Rviz screen.png" width=600 height=400>
 
 Welcome to Rviz !
 
