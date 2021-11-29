@@ -2,9 +2,9 @@
 
 ## Introduction
 
-If you have gone through the content of Week 0 and tried the problem, you should be familiar with the basic ideas of ROS. In addition, you should be capable of creating a simple publisher and a subscriber. If so, you are ready to face what is about to come your way. In this episode, you will see how to work in **Gazebo**, a simulator and **Rviz**, a visualizer. You will also get to play with the **Turtlebot3** in Gazebo and see the working of its sensors in Rviz.
+If you have gone through the content of Week 0 and tried the problem, you should be familiar with the basic ideas of ROS. In addition, you should be capable of creating a simple publisher and a subscriber. If so, you are ready to face what is about to come your way. In this episode, you will see how to work in **Gazebo**, a simulator and **Rviz**, a visualizer. You will also get to play with the **TurtleBot3** in Gazebo and see the working of its sensors in Rviz.
 
-Pictures of Gazebo, Rviz and Turtlebot3
+Pictures of Gazebo, Rviz and TurtleBot3
 
 ## Gaze at Gazebo ...
 
@@ -14,19 +14,25 @@ Pictures of Gazebo, Rviz and Turtlebot3
 
 ## The Turtlebot3 emerges ...
 
-## Reference
+## Installing Turtlebot3
 
-[Reference](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+For greater clarity, you may refer the following link.
 
-## Launching Turtlebot3 in Gazebo
+[Installing Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup)
 
-To summon the turtlebot in an **empty world**
+Henceforth, the **TurtleBot3** may be referred to as **bot** simply, unless specified.
+
+
+
+## Launching TurtleBot3 in Gazebo
+
+To summon the bot in an **empty world** in **Gazebo**, execute the following command.
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ```
 
-To summon the turtlebot in the **standard environment**
+Alternatively, to summon the bot in the **standard environment** in  **Gazebo**, execute the following command.
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
@@ -34,11 +40,14 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 ## Visualizing in Rviz
 
-After launching the bot in Gazebo, run the following command
+After launching the bot in Gazebo, to visualize it in **Rviz**, run the following command
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 ```
+
+If the bot is in the standard world, you should be able to see the point cloud representing the objects detected by the bot. Amazing !
+
 
 ## Moving the bot around
 
@@ -59,5 +68,24 @@ Subscribing to the topic **/scan**
 
 Sample subscriber code
 
+
+The bot must be feeling lonely roaming all by itself. Let us bring a friend to the world.
+
+## Summoning Multiple bots in Gazebo
+
+## Visualizing Multiple bots in Rviz
+
+
+## Way ahead
+
+Now that you have gained the ability to write code to move the bot around and sense the surroundings, what you can do with the bot is restricted only by your imagination. 
+
+To know more about the TurtleBot3 and explore it various capabilities 
+
+[TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
+
+Additionally, one can try writing code for publishers and subscribers in different ways apart from the prescribed style, such as using **classes**. We shall leave that up to you for exploration. Have fun.
+
+# Try it out ...
 
 ## Guiding a blind bot ...
