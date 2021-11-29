@@ -58,7 +58,7 @@ If the bot is in the standard world, you should be able to see the **point cloud
 
 ## Moving the bot around
 
-Let's move the bot around using the ```turtlebot3_telop``` package
+Let's move the bot around using the ```turtlebot3_teleop``` package
 Using **teleop**
 
 ```
