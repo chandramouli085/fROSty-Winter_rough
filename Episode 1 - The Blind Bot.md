@@ -94,7 +94,9 @@ Using the **Add** button, we can add additional displays.
 
 ## The TurtleBot3 emerges ...
 
-BUrger, Waffle, Waffle-Pi
+TurtleBot3 is the third version of the TurtleBot, which is a ROS standard platform robot for use in education and research. It is available in hardware form as well as in a simulated format. We shall be using the simulated format obviously.
+
+TurtleBot3 comes in 3 different models - Burger, Waffle and Waffle-Pi
 
 ## Installing TurtleBot3
 
@@ -148,13 +150,15 @@ Upon execution, the following screen should be visible.
 
 ## Visualizing in Rviz
 
-After launching the bot in Gazebo, to visualize it in **Rviz**, run the following command
+After launching the bot in Gazebo, to visualize it in **Rviz**, run the following command in a separate tab
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 ```
 
 If the bot is in the standard world, you should be able to see the **point cloud** representing the objects detected by the bot. Amazing !
+
+<img src="Images/Bot_rviz.png" width=100 height=100>
 
 
 ## Moving the bot around
