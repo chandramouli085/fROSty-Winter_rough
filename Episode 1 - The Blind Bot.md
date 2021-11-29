@@ -2,11 +2,14 @@
 
 ## Introduction
 
-If you have gone through the content of Week 0 and tried the problem, you should be familiar with the basic ideas of ROS. In addition, you should be capable of creating a simple publisher and a subscriber. If so, you are ready to face what is about to come your way. In this episode, you will see how to work in **Gazebo**, a simulator and **Rviz**, a visualizer. You will also get to play with the **TurtleBot3** in Gazebo and see the working of its sensors in Rviz.
+If you have gone through the content of Week 0 and tried the problem, you should be familiar with the basic ideas of ROS. In addition, you should be capable of creating a simple publisher and a subscriber. If so, you are ready to face what is about to come your way. In this episode, you will see how to work in **Gazebo**, a simulator and **Rviz**, a visualizer. 
 
-Pictures of Gazebo, Rviz and TurtleBot3
 
-<img src="Images/Rviz.png" width=320 height=240>
+<img src="Images/Gazebo.jpg" width=320 height=150> <img src="Images/Rviz.png" width=320 height=240>
+
+You will also get to play with the **TurtleBot3** in Gazebo and see the working of its sensors in Rviz.
+
+<img src="Images/Turtlebot3.png" width=200 height=240>
 
 ## Gaze at Gazebo ...
 
