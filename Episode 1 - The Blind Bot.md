@@ -37,7 +37,7 @@ Welcome to Rviz !
 
 1. **Displays** - These are entities that can be "displayed"/ represented/visualized in the world like **point cloud** and **robot state**
 
-<img src="https://drive.google.com/uc?id=1Z5HlBOTA2SV7m7CKLB-2LD5otB0THIVj" width=200 height=400>
+<img src="images/Add_displays.png" width=200 height=400>
 
 Using the **Add** button, we can add additional displays.
 
