@@ -24,7 +24,7 @@ gazebo
 ```
 Upon execution, the following screen should appear.
 
-<img src="Images/Gazebo screen.png" width=300 height=200>
+<img src="Images/Gazebo screen.png" width=600 height=400>
 
 
 Welcome to Gazebo !
