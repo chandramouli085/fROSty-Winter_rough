@@ -14,7 +14,23 @@ Pictures of Gazebo, Rviz and TurtleBot3
 
 ### Installation
 
+Execute the following command
+
+```
+sudo apt-get install ros-<Version>-rviz
+```
+Version = ```kinetic```, ```melodic```, ```noetic```
+
+
 ### Starting Rviz
+
+Ensure that ```roscore``` is running in a separate tab. Then execute the following command,
+
+```
+rosrun rviz rviz
+```
+
+Welcome to Rviz !
 
 ### Basic features
 
