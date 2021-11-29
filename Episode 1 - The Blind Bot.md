@@ -59,11 +59,22 @@ If the bot is in the standard world, you should be able to see the **point cloud
 ## Moving the bot around
 
 Let's move the bot around using the ```turtlebot3_teleop``` package
-Using **teleop**
+
+The Turtlebot3 is a **differential drive** bot and its motion is described by its **linear velocity** and **angular velocity**. The ratio of the instantaneous linear velocity to the instantaneous angular velocity gives the **radius of curvature** of the arc it traverses at the instant.
+
+On executing the command below,
 
 ```
 rosrun turtlebot3_teleop turtlebot3_teleop_key
 ```
+we get the ability to control the linear velocity and the angular velocity of the bot using the appropriate keys as displayed on the screen.
+
+**w** - Increase linear velocity
+**x** - Decrease linear veocity
+**a** - Increase angular velocity
+**d** - Decrease angular velocity
+**s** - Stop
+
 
 Publishing to the topic **/cmd_vel**
 
