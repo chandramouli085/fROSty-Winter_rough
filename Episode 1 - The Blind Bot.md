@@ -39,7 +39,14 @@ Welcome to Gazebo !
 
 ### What is it ?
 
+Rviz is a **3D visualizer** for **ROS** that lets us view a lot about the **sensing**, **processing** and **state** of a robot.
+This makes the **development** of robots easier and also enables us to **debug** more efficiently (better than looking at numbers on a terminal :P)
+
 ### What is the difference between Rviz and Gazebo ?
+
+Rviz is a **visualizer** i.e it shows what the robot **perceives** is happening while Gazebo is a **simulator** i.e. it shows what is **actually** happening.
+
+Consider the scenario in which we do not have physical hardware-based robots. In that case we would use a simulator like Gazebo to know what would actually happen and the data from the sensors can be visualized in a visualization tool like Rviz. In case we have physical robots, then the data from the sensors can still be visualized in Rviz, but we do not need a simulator necessarily.
 
 ### Installation
 
@@ -107,6 +114,8 @@ Model = ```burger```,```waffle```,```waffle_pi```
 
 We shall stick to ```burger``` for the time being.
 
+Close the terminal.
+
 For greater clarity, you may refer the following link.
 
 [Installing Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup)
@@ -117,7 +126,7 @@ Let us see the bot in action in Gazebo !
 
 ## Launching TurtleBot3 in Gazebo
 
-To summon the bot in an **empty world** in **Gazebo**, execute the following command.
+To summon the bot in an **empty world** in **Gazebo**, execute the following command in a new terminal.
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
