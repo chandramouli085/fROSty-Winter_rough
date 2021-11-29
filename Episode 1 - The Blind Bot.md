@@ -21,7 +21,7 @@ To install the TurtleBot3, execute the following command
 ```
 sudo apt-get install ros-<ROS Version>-turtlebot3
 ```
-ROS Version = ``` kinetic ```, ``` melodic```,``` noetic```
+ROS Version = ```kinetic```, ```melodic```, ```noetic```
 
 For greater clarity, you may refer the following link.
 
