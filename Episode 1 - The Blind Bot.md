@@ -12,6 +12,16 @@ Pictures of Gazebo, Rviz and TurtleBot3
 
 ## Rviz ...
 
+### Installation
+
+### Starting Rviz
+
+### Basic features
+
+### Saving and Loading configurations
+
+### Starting Rviz through launch files
+
 ## The TurtleBot3 emerges ...
 
 BUrger, Waffle, Waffle-Pi
