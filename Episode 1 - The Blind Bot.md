@@ -32,6 +32,7 @@ echo "export TURTLEBOT3_MODEL=<Model>" >> ~/.bashrc
 ```
 Model = ```burger```,```waffle```,```waffle_pi```
 
+We shall stick to ```burger``` for the time being.
 
 For greater clarity, you may refer the following link.
 
