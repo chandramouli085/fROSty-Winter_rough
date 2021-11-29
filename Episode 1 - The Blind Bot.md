@@ -70,9 +70,13 @@ rosrun turtlebot3_teleop turtlebot3_teleop_key
 we get the ability to control the linear velocity and the angular velocity of the bot using the appropriate keys as displayed on the screen.
 
 **w** - Increase linear velocity
+
 **x** - Decrease linear veocity
+
 **a** - Increase angular velocity
+
 **d** - Decrease angular velocity
+
 **s** - Stop
 
 
