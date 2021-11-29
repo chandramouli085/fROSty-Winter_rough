@@ -6,7 +6,13 @@ If you have gone through the content of Week 0 and tried the problem, you should
 
 Pictures of Gazebo, Rviz and Turtlebot3
 
+## Gaze at Gazebo ...
 
+## Create a World in Gazebo
+
+## Rviz ...
+
+## The Turtlebot3 emerges ...
 
 ## Reference
 
@@ -53,7 +59,5 @@ Subscribing to the topic **/scan**
 
 Sample subscriber code
 
-
-## Create a World in Gazebo
 
 ## Guiding a blind bot ...
