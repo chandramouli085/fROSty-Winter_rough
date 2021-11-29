@@ -11,7 +11,23 @@ You will also get to play with the **TurtleBot3** in Gazebo and see the working 
 
 <img src="Images/Turtlebot3.png" width=200 height=240>
 
+Let's begin !
+
 ## Gaze at Gazebo ...
+
+If you have successfully installed ROS , Gazebo should already be installed
+
+Launch Gazebo by executing the following command
+
+```
+gazebo
+```
+Upon execution, the following screen should appear.
+
+<img src="Images/Gazebo screen.png" width=300 height=200>
+
+
+Welcome to Gazebo !
 
 ## Create a World in Gazebo
 
