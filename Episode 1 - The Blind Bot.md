@@ -37,16 +37,16 @@ Welcome to Rviz !
 
 1. **Displays** - These are entities that can be "displayed"/ represented/visualized in the world like **point cloud** and **robot state**
 
-<img src="Images/Add_displays.png" width=200 height=400>
+<img src="Images/Displays.png" width=200 height=400>
 
 Using the **Add** button, we can add additional displays.
 
-<img src="https://drive.google.com/uc?id=1ehrMSr6i-686fTI6Ysbbrdt3jye8PFIg" width=200 height=320>
+<img src="Images/Add_displays" width=200 height=320>
 
 
 2. **Camera types** - These are ways of viewing the world from different angles and projections.
 
-<img src="https://drive.google.com/uc?id=10pi9apbiP0_aLYC8Glx_w7DUF-plusEq" width=300 height=100>
+<img src="Images/Camera_types" width=300 height=100>
 
 3. **Configurations** - These are combinations of displays, camera types, etc that define the overall layout of what and how the visualization is taking place in the rviz window.
 
