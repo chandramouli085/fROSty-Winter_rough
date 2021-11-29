@@ -6,6 +6,8 @@ If you have gone through the content of Week 0 and tried the problem, you should
 
 Pictures of Gazebo, Rviz and TurtleBot3
 
+<img src="Images/Rviz.png" width=320 height=240>
+
 ## Gaze at Gazebo ...
 
 ## Create a World in Gazebo
@@ -20,6 +22,10 @@ Execute the following command
 sudo apt-get install ros-<Version>-rviz
 ```
 Version = ```kinetic```, ```melodic```, ```noetic```
+
+Upon execution, the following screen should appear.
+
+<img src="Images/Rviz screen.png" width=600 height=400>
 
 
 ### Starting Rviz
