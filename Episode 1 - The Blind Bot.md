@@ -14,6 +14,8 @@ Pictures of Gazebo, Rviz and TurtleBot3
 
 ## The TurtleBot3 emerges ...
 
+BUrger, Waffle, Waffle-Pi
+
 ## Installing TurtleBot3
 
 To install the TurtleBot3, execute the following command
@@ -22,6 +24,14 @@ To install the TurtleBot3, execute the following command
 sudo apt-get install ros-<ROS Version>-turtlebot3
 ```
 ROS Version = ```kinetic```, ```melodic```, ```noetic```
+
+After the above step, we need to set a **default TurtleBot3 Model** by executing the following command.
+
+```
+echo "export TURTLEBOT3_MODEL=<Model>" >> ~/.bashrc
+```
+Model = ```burger```,```waffle```,```waffle-pi```
+
 
 For greater clarity, you may refer the following link.
 
@@ -79,10 +89,12 @@ we get the ability to control the linear velocity and the angular velocity of th
 
 **s** - Stop
 
+One might quickly realize that moving the bot with the keys is kind of annoying.
 
-Publishing to the topic **/cmd_vel**
+Let's see another way of moving the bot around using a publisher that will publish velocity commands to the ```/cmd_vel``` topic. For simplicity, we shall make it go with a constant speed in a circular path to give the basic idea.
 
-Sample publisher code to make the bot move in a circular path in an anticlockwise manner
+
+
  
 
 ## Sensing the surroundings
