@@ -16,13 +16,20 @@ Pictures of Gazebo, Rviz and TurtleBot3
 
 ## Installing Turtlebot3
 
+To install the TurtleBot3, execute the following command
+
+```
+sudo apt-get install ros-<ROS Version>-turtlebot3
+```
+ROS Version = ``` kinetic ```, ``` melodic```,``` noetic``
+
 For greater clarity, you may refer the following link.
 
 [Installing Turtlebot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/#pc-setup)
 
 Henceforth, the **TurtleBot3** may be referred to as **bot** simply, unless specified.
 
-
+Let us see the bot in action in Gazebo !
 
 ## Launching TurtleBot3 in Gazebo
 
