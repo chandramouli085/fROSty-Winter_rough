@@ -30,7 +30,7 @@ After the above step, we need to set a **default TurtleBot3 Model** by executing
 ```
 echo "export TURTLEBOT3_MODEL=<Model>" >> ~/.bashrc
 ```
-Model = ```burger```,```waffle```,```waffle-pi```
+Model = ```burger```,```waffle```,```waffle_pi```
 
 
 For greater clarity, you may refer the following link.
