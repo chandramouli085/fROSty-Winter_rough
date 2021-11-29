@@ -34,6 +34,22 @@ Welcome to Rviz !
 
 ### Basic features
 
+
+1. **Displays** - These are entities that can be "displayed"/ represented/visualized in the world like **point cloud** and **robot state**
+
+<img src="https://drive.google.com/uc?id=1Z5HlBOTA2SV7m7CKLB-2LD5otB0THIVj" width=200 height=400>
+
+Using the **Add** button, we can add additional displays.
+
+<img src="https://drive.google.com/uc?id=1ehrMSr6i-686fTI6Ysbbrdt3jye8PFIg" width=200 height=320>
+
+
+2. **Camera types** - These are ways of viewing the world from different angles and projections.
+
+<img src="https://drive.google.com/uc?id=10pi9apbiP0_aLYC8Glx_w7DUF-plusEq" width=300 height=100>
+
+3. **Configurations** - These are combinations of displays, camera types, etc that define the overall layout of what and how the visualization is taking place in the rviz window.
+
 ### Saving and Loading configurations
 
 ### Starting Rviz through launch files
