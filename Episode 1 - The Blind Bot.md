@@ -69,7 +69,7 @@ If the bot is in the standard world, you should be able to see the **point cloud
 
 ## Moving the bot around
 
-Let's move the bot around using the ```turtlebot3_teleop``` package
+Let's move the bot around in the standard world in Gazebo using the ```turtlebot3_teleop``` package
 
 The Turtlebot3 is a **differential drive** bot and its motion is described by its **linear velocity** and **angular velocity**. The ratio of the instantaneous linear velocity to the instantaneous angular velocity gives the **radius of curvature** of the arc it traverses at the instant.
 
@@ -95,12 +95,10 @@ One might quickly realize that moving the bot with the keys is kind of annoying.
 Let's see another way of moving the bot around using a publisher that will publish velocity commands to the ```/cmd_vel``` topic. For simplicity, we shall make it go with a constant speed in a circular path to give the basic idea.
 
 
-
- 
-
 ## Sensing the surroundings
 
-Subscribing to the topic **/scan**
+Moving around is not that great unless the bot is also aware of its surroundings, hence it becomes important to be able to utilize the data from its sensors such as **LaserScan**. Let's create a subscriber that will subscribe to the ```/scan``` topic to obtain the distances of the nearest obstacles at different angles with respect to the heading of the bot.
+
 
 Sample subscriber code
 
@@ -116,7 +114,7 @@ The bot must be feeling lonely roaming all by itself. Let us bring a friend to t
 
 Now that you have gained the ability to write code to move the bot around and sense the surroundings, what you can do with the bot is restricted only by your imagination. 
 
-To know more about the TurtleBot3 and explore it various capabilities 
+To know more about the TurtleBot3 and explore it various capabilities like navigation and SLAM, refer to the link below
 
 [TurtleBot3](https://emanual.robotis.com/docs/en/platform/turtlebot3/overview/)
 
