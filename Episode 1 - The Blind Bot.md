@@ -132,11 +132,19 @@ To summon the bot in an **empty world** in **Gazebo**, execute the following com
 roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ```
 
+Upon execution, the following screen should be visible.
+
+<img src="Images/Bot_Empty.png" width=600 height=400>
+
 Alternatively, to summon the bot in the **standard environment** in  **Gazebo**, execute the following command.
 
 ```
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
+
+Upon execution, the following screen should be visible.
+
+<img src="Images/Bot_Standard.png" width=300 height=200>
 
 ## Visualizing in Rviz
 
