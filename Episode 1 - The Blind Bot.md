@@ -15,6 +15,10 @@ Let's begin !
 
 ## Gaze at Gazebo ...
 
+### What is it ?
+
+### Starting Gazebo
+
 If you have successfully installed ROS , Gazebo should already be installed
 
 Launch Gazebo by executing the following command
@@ -31,7 +35,11 @@ Welcome to Gazebo !
 
 ## Create a World in Gazebo
 
-## Rviz ...
+## Viziting Rviz ...
+
+### What is it ?
+
+### What is the difference between Rviz and Gazebo ?
 
 ### Installation
 
