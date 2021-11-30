@@ -219,6 +219,7 @@ geometry_msgs/Vector3 angular
 
 
 Once we know the features of the message we are dealing with, we can proceed with writing the code.
+Create a python file ```bot_move.py``` in the ```scripts``` folder of ```epi1``` 
 
 ```python
 #! /usr/bin/env python
@@ -252,19 +253,52 @@ if __name__=='__main__':
         pass
 
 ```
+After saving the file, remember to make it executable.
 
-
-
+On executing  ```rosrun epi1 bot_move.py``` in a different tab, the bot begins to move along a circular path. Cool !
 
 ## Sensing the surroundings
 
 Moving around is not that great unless the bot is also aware of its surroundings, hence it becomes important to be able to utilize the data from its sensors such as **LaserScan**. Let's create a subscriber that will subscribe to the ```/scan``` topic to obtain the distances of the nearest obstacles at different angles with respect to the heading of the bot.
 
+We can determine the message type that is being published into ```/scan``` like how it was determined for ```/cmd_vel```. 
 
-Sample subscriber code
+Create a python file ```bot_sense.py``` in the ```scripts``` folder of ```epi1```
+
+```python
+#! /usr/bin/env python
+
+import rospy
+from sensor_msgs.msg import LaserScan
+
+def read(data):
+    theta_min = data.angle_min  # minimum angle in the field of detection
+    theta_max = data.angle_max  # maximum angle in the field of detection
+    R = data.ranges #Array containing the distances for different values of angle 
+    l = len(R) #length of the array R
+
+    # R[0] corresponds to the distance at theta_min
+    # R[l-1] corresponds to the distance at theta_max
+    # Intermediate entries correspond to the distances at intermediate angles
+
+    print([R[0], R[l-1]])
+
+if __name__=="__main__":
+    rospy.init_node('bot_sense')
+    rospy.Subscriber('/scan',LaserScan,read)
+    rospy.spin()
+    
+```
+
+    
+On executing ```rosrun epi1 bot_sense.py``` in a different tab, we should be able to see a continuous feed of sensor readings on the terminal screen.
+
+Move the bot around by running ```bot_move.py``` as well. What do you see ?
+
+Try printing out ```theta_min```,```theta_max```,```l``` and other variables to get a better understanding of the features of the message.
 
 
-The bot must be feeling lonely roaming all by itself. Let us bring a friend to the world.
+At this point, the bot must be feeling lonely roaming all by itself. Let us bring a friend to the world. Even a high-functioning sociopath needs one :D 
 
 ## Summoning Multiple bots in Gazebo
 
