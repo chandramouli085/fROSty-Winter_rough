@@ -379,6 +379,10 @@ code turtlebot3_remote.launch
 
 ### Launch file
 
+Create a file ```2bots.launch``` in the ```launch``` folder of ```epi1```
+
+Add the following code to the file.
+
 ```
 <launch>
   
@@ -436,7 +440,7 @@ code turtlebot3_remote.launch
   </group>  
 </launch>
 ```
-
+On executing ```roslaunch epi1 2bots.launch```, you should be able to see two bots, **Sherlock (the Waffle model)** and **Watson (the Burger model)** in Gazebo.
 
 ## Visualizing Multiple bots in Rviz
 
@@ -444,7 +448,8 @@ code turtlebot3_remote.launch
 
 ### Modified launch file
 
-Adding  ```<node name="rviz" pkg="rviz" type="rviz" args="-d $(find sherlock)/configs/2bots.rviz"/>``` to the previous version of the launch file gives the required file
+Adding  ``` <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/configs/2bots.rviz"/>``` to the previous version of the launch file gives the required file
+
 ```
 <launch>
   
@@ -456,6 +461,7 @@ Adding  ```<node name="rviz" pkg="rviz" type="rviz" args="-d $(find sherlock)/co
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
   </include>
+
 
   <group ns="sherlock">
 
@@ -479,6 +485,8 @@ Adding  ```<node name="rviz" pkg="rviz" type="rviz" args="-d $(find sherlock)/co
 
   </group>
 
+
+  
   <group ns="watson">
 
     <arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
@@ -501,8 +509,9 @@ Adding  ```<node name="rviz" pkg="rviz" type="rviz" args="-d $(find sherlock)/co
 
   </group>
 
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sherlock)/configs/2bots.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/configs/2bots.rviz"/>
   
+
 </launch>
 ```
 
