@@ -345,6 +345,36 @@ Try printing out ```theta_min```,```theta_max```,```l``` and other variables to 
 
 At this point, the bot must be feeling lonely roaming all by itself. Let us bring a friend to the world. Even a high-functioning sociopath needs one :D 
 
+## Exercise
+
+Take a look at the code in ```turtlebot3_world.launch```, ```turtlebot3_gazebo_rviz.launch``` and ```turtlebot3_remote.launch```. It will be helpful for the upcoming sections as the commands in these files will be used more or less directly with slight modification to launch the bots.
+
+To view the code in ```turtlebot3_world.launch```, execute the following commands one after another
+
+```
+roscd turtlebot3_gazebo
+cd launch
+code turtlebot3_world.launch
+```
+
+For ```turtlebot3_gazebo_rviz.launch```,
+
+```
+roscd turtlebot3_gazebo
+cd launch
+code turtlebot3_gazebo_rviz.launch
+```
+
+For ```turtlebot3_remote.launch```,
+
+```
+roscd turtlebot3_bringup
+cd launch
+code turtlebot3_remote.launch
+```
+
+
+
 ## Summoning Multiple bots in Gazebo
 
 ### Launch file
