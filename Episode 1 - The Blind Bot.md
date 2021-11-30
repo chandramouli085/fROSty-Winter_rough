@@ -97,7 +97,7 @@ Using the **Add** button, we can add additional displays.
 
 2. **Camera types** - These are ways of viewing the world from different angles and projections.
 
-<img src="Images/Camera_types.png" width=300 height=100>
+<img src="Images/Camera_types.png" width=300 height=90>
 
 3. **Configurations** - These are combinations of displays, camera types, etc that define the overall layout of what and how the visualization is taking place in the rviz window.
 
@@ -442,9 +442,33 @@ Add the following code to the file.
 ```
 On executing ```roslaunch epi1 2bots.launch```, you should be able to see two bots, **Sherlock (the Waffle model)** and **Watson (the Burger model)** in Gazebo.
 
+<img src="Images/2bots_gazebo.png" width=400 height=400>
+
 ## Visualizing Multiple bots in Rviz
 
 ### Saving a new configuration
+
+We would like to save a configuration beforehand that will enable us to view the bots and the laser scan data conveniently.
+
+1. Change the **Fixed Frame** to ```odom```
+<img src="Images/Odom_fixedframe.png" width=350 height=200>
+
+2. Change the angle to approximately -1.57 (this is optional)
+<img src="Images/ChangeAngle.png" width=150 height=200>
+
+3. Add a **Robot Model** and rename it as **Sherlock**. Change the **Robot Description** to **sherlock/robot_description** and **TF Prefix** to **sherlock**
+<img src="Images/Sherlock_RobotModel.png" width=250 height=400>
+
+4. Similarly, add another **Robot Model** and rename it as **Watson**. Change the **Robot Description** to **watson/robot_description** and **TF Prefix** to **watson**
+<img src="Images/Watson_RobotModel.png" width=200 height=150>
+
+5. Add a **Laser Scan** and rename it as **Sherlock_Laser Scan**. Change the **Topic** to **sherlock/scan**
+<img src="Images/Sherlock_LaserScan.png" width=200 height=150>
+
+6. Add a **Laser Scan** and rename it as **Watson_Laser Scan**. Change the **Topic** to **watson/scan**
+<img src="Images/Watson_LaserScan.png" width=200 height=150>
+
+After making the above changes, save the configuration as ```2bots.rviz``` in the ```configs``` folder of ```epi1```
 
 ### Modified launch file
 
@@ -515,7 +539,9 @@ Adding  ``` <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/confi
 </launch>
 ```
 
-On executing ```roslaunch epi1 2bots.launch```, you should be able to see the Sherlock and Watson bots beside each other in Gazebo and Rviz. Lovely!
+On executing ```roslaunch epi1 2bots.launch```, you should be able to see the Sherlock and Watson bots beside each other in Rviz as well. Lovely!
+
+<img src="Images/2bots_rviz.png" width=400 height=400>
 
 ## Way ahead
 
