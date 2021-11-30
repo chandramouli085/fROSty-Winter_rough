@@ -13,6 +13,10 @@ You will also get to play with the **TurtleBot3** in Gazebo and see the working 
 
 Let's begin !
 
+## Initial preparation
+
+Create a package ```epi1``` in ```catkin_ws```, with ```scripts```,```launch``` and ```configs``` folders.
+
 ## Gaze at Gazebo ...
 
 ### What is it ?
@@ -158,7 +162,7 @@ roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
 If the bot is in the standard world, you should be able to see the **point cloud** representing the objects detected by the bot. Amazing !
 
-<img src="Images/Bot_rviz.png" width=100 height=100>
+<img src="Images/Bot_rviz.png" width=400 height=350>
 
 
 ## Moving the bot around
@@ -187,6 +191,69 @@ we get the ability to control the linear velocity and the angular velocity of th
 One might quickly realize that moving the bot with the keys is kind of annoying.
 
 Let's see another way of moving the bot around using a publisher that will publish velocity commands to the ```/cmd_vel``` topic. For simplicity, we shall make it go with a constant speed in a circular path to give the basic idea.
+
+#### Knowing the message type
+
+How do we know the type of message that needs to be published into ```/cmd_vel``` ? Well, on launching the bot in Gazebo, execute the following command in a new tab
+
+``` rostopic type /cmd_vel ```
+
+The expected output is ```geometry_msgs/Twist```
+
+To inspect the nature of this message type, execute the following command
+
+``` rostopic type /cmd_vel | rosmsg show ```
+
+The expected output is
+
+```
+geometry_msgs/Vector3 linear
+  float64 x
+  float64 y
+  float64 z
+geometry_msgs/Vector3 angular
+  float64 x
+  float64 y
+  float64 z
+```
+
+
+Once we know the features of the message we are dealing with, we can proceed with writing the code.
+
+```python
+#! /usr/bin/env python
+
+import rospy
+
+# rosmsg type gives output of the form A/B
+# The corresponding import statement will be 'from A.msg import B'
+
+from geometry_msgs.msg import Twist 
+
+def move():
+    rospy.init_node('bot_move',anonymous=True)
+    pub=rospy.Publisher('/cmd_vel',Twist,queue_size=10)
+
+    r = rospy.Rate(10)
+
+    vel_cmd = Twist()
+
+    vel_cmd.linear.x = 0.1  #The bot's heading direction is along the x-axis in its own reference frame
+    vel_cmd.angular.z = 0.5
+
+    while not rospy.is_shutdown():
+        pub.publish(vel_cmd)
+        r.sleep()
+
+if __name__=='__main__':
+    try:
+        move()
+    except rospy.ROSInterruptException:
+        pass
+
+```
+
+
 
 
 ## Sensing the surroundings
