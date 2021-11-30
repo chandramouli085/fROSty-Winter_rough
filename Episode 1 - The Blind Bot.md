@@ -94,7 +94,43 @@ Using the **Add** button, we can add additional displays.
 
 ### Saving and Loading configurations
 
+Currently the default layout of the Rviz window is similar to the picture below
+
+<img src="Images/Def_layout.png" width=600 height=200>
+
+Say we are interested in saving a configuration consisting of additional displays such as LaserScan as well as a different camera type. How do we accomplish that ?
+
+1. Add the required displays and change the camera type
+
+<img src="Images/New_layout.png" width=600 height=250>
+
+2. To save the configuration,
+
+    2.1) Go to **File > Save Config As (Ctrl + Shift + S)**
+  
+    2.2) Go to the appropriate folder (```epi1 > configs```), give an appropriate name (```custom```) and save
+
+3. To load the configuration at a later time,
+
+    3.1) Go to **File > Open Config (Ctrl + O)**
+  
+    3.2) Go to the appropriate folder (```epi1 > configs```) and select the config file (```custom```)
+   
+
 ### Starting Rviz through launch files
+
+Create ```custom_rviz.launch``` in the ```launch``` folder
+
+Add the following code to launch Rviz with ```custom.rviz``` configuration
+
+```
+<launch>
+<!-- Format of args = "-d $(find package-name)/relative path"-->
+<node name="custom_rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/configs/custom.rviz"/>
+</launch>
+```
+
+On executing  ```roslaunch epi1 custom_rviz.launch```, Rviz will be launched with the desired configuration.
 
 ## The TurtleBot3 emerges ...
 
@@ -151,6 +187,8 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 Upon execution, the following screen should be visible.
 
 <img src="Images/Bot_Standard.png" width=400 height=400>
+
+
 
 ## Visualizing in Rviz
 
@@ -302,7 +340,75 @@ At this point, the bot must be feeling lonely roaming all by itself. Let us brin
 
 ## Summoning Multiple bots in Gazebo
 
+### Launch file
+
+```
+<launch>
+  
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_gazebo)/worlds/turtlebot3_world.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+
+  <group ns="sherlock">
+
+    <arg name="model" default="waffle" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="x_pos" default="-0.5"/>
+    <arg name="y_pos" default="-0.5"/>
+    <arg name="z_pos" default="0.0"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro " />
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description "  />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="sherlock"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="sherlock_odom" args="0 0 0 0 0 0 1 odom sherlock/odom 100" />
+
+  </group>
+
+  <group ns="watson">
+
+    <arg name="model" default="burger" doc="model type [burger, waffle, waffle_pi]"/>
+    <arg name="x_pos" default="-0.5"/>
+    <arg name="y_pos" default="-1.5"/>
+    <arg name="z_pos" default="0.0"/>
+
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro " /> 
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_urdf"  args="-urdf -model turtlebot3_$(arg model) -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos) -param robot_description" />
+
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="watson"/>
+    </node>
+
+    <node pkg="tf" type="static_transform_publisher" name="watson_odom" args="0 0 0 0 0 0 1 odom watson/odom 100" />
+
+  </group>
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find sherlock)/configs/2bots.rviz"/>
+  
+</launch>
+```
+
+
 ## Visualizing Multiple bots in Rviz
+
+### Saving a new configuration
+
+### Modified launch files
 
 
 ## Way ahead
