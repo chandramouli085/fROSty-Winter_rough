@@ -15,7 +15,7 @@ Let's begin !
 
 ## Initial preparation
 
-Create a package ```epi1``` in ```catkin_ws```, with ```scripts```,```launch``` and ```configs``` folders.
+Create a package ```epi1``` in ```catkin_ws```, with ```scripts```,```launch``` and ```configs``` folders. This will be required for storing the various files that will be created throughout.
 
 ## Gaze at Gazebo ...
 
