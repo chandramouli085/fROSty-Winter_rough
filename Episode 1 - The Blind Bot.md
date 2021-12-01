@@ -383,7 +383,7 @@ Create a file ```2bots.launch``` in the ```launch``` folder of ```epi1```
 
 Add the following code to the file.
 
-```
+```xml
 <launch>
   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -474,7 +474,7 @@ After making the above changes, save the configuration as ```2bots.rviz``` in th
 
 Adding  ``` <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/configs/2bots.rviz"/>``` to the previous version of the launch file gives the required file
 
-```
+```xml
 <launch>
   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
