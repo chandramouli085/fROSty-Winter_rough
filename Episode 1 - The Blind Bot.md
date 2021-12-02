@@ -44,6 +44,8 @@ Welcome to Gazebo !
 
 ### Basic features
 
+**Optional Reading**-[Understanding the GUI](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2)
+
 ### Create a World in Gazebo
 
 ### Saving and Loading worlds
@@ -213,6 +215,33 @@ If the bot is in the standard world, you should be able to see the **point cloud
 
 <img src="W1_Images/Bot_rviz.png" width=400 height=350>
 
+## Taking a peek at the TurtleBot3 topics
+
+After launching the TurtleBot3 (Burger model) in Gazebo, execute ```rostopic list``` in another tab.
+
+The expected output is as follows
+```
+/clock
+/cmd_vel
+/gazebo/link_states
+/gazebo/model_states
+/gazebo/parameter_descriptions
+/gazebo/parameter_updates
+/gazebo/set_link_state
+/gazebo/set_model_state
+/imu
+/joint_states
+/odom
+/rosout
+/rosout_agg
+/scan
+/tf
+```
+We are able to see some of the important topics such as ```/cmd_vel``` and ```/scan```, which will be used later.
+
+## Investigation 1
+
+Launch the **Waffle** model of TurtleBot3 in Gazebo and look at the topics. Anything surprising ? Are you able to figure out a connection with the title of the episode ?
 
 ## Moving the bot around
 
@@ -349,7 +378,7 @@ Try printing out ```theta_min```,```theta_max```,```l``` and other variables to 
 
 At this point, the bot must be feeling lonely roaming all by itself. Let us bring a friend to the world. Even a high-functioning sociopath needs one :D 
 
-## Exercise
+## Investigation 2
 
 Take a look at the code in ```turtlebot3_world.launch```, ```turtlebot3_gazebo_rviz.launch``` and ```turtlebot3_remote.launch```. It will be helpful for the upcoming sections as the commands in these files will be used more or less directly with slight modification to launch the bots.
 
