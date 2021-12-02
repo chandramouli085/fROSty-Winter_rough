@@ -48,6 +48,8 @@ Welcome to Gazebo !
 
 ### Saving and Loading worlds
 
+**Optional Reading**-[Building a world](http://gazebosim.org/tutorials?tut=build_world)
+
 ### Starting Gazebo with Launch files
 
 ## Viziting Rviz ...
