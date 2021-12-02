@@ -5,11 +5,11 @@
 If you have gone through the content of Week 0 and tried the problem, you should be familiar with the basic ideas of ROS. In addition, you should be capable of creating a simple publisher and a subscriber. If so, you are ready to face what is about to come your way. In this episode, you will see how to work in **Gazebo** and **Rviz**. 
 
 
-<img src="Images/Gazebo.jpg" width=320 height=150> <img src="Images/Rviz.png" width=320 height=240>
+<img src="W1_Images/Gazebo.jpg" width=320 height=150> <img src="Images/Rviz.png" width=320 height=240>
 
 You will also get to play with the **TurtleBot3** in Gazebo and see the working of its sensors in Rviz.
 
-<img src="Images/Turtlebot3.png" width=200 height=240>
+<img src="W1_Images/Turtlebot3.png" width=200 height=240>
 
 Let's begin !
 
@@ -37,7 +37,7 @@ gazebo
 ```
 Upon execution, the following screen should appear.
 
-<img src="Images/Gazebo screen.png" width=600 height=400>
+<img src="W1_Images/Gazebo screen.png" width=600 height=400>
 
 
 Welcome to Gazebo !
@@ -79,7 +79,7 @@ rosrun rviz rviz
 ```
 Upon execution, the following screen should appear.
 
-<img src="Images/Rviz screen.png" width=600 height=400>
+<img src="W1_Images/Rviz screen.png" width=600 height=400>
 
 Welcome to Rviz !
 
@@ -88,16 +88,16 @@ Welcome to Rviz !
 
 1. **Displays** - These are entities that can be "displayed"/ represented/visualized in the world like **point cloud** and **robot state**
 
-<img src="Images/Displays.png" width=200 height=400>
+<img src="W1_Images/Displays.png" width=200 height=400>
 
 Using the **Add** button, we can add additional displays.
 
-<img src="Images/Add_displays.png" width=200 height=320>
+<img src="W1_Images/Add_displays.png" width=200 height=320>
 
 
 2. **Camera types** - These are ways of viewing the world from different angles and projections.
 
-<img src="Images/Camera_types.png" width=300 height=90>
+<img src="W1_Images/Camera_types.png" width=300 height=90>
 
 3. **Configurations** - These are combinations of displays, camera types, etc that define the overall layout of what and how the visualization is taking place in the rviz window.
 
@@ -105,13 +105,13 @@ Using the **Add** button, we can add additional displays.
 
 Currently the default layout of the Rviz window is similar to the picture below
 
-<img src="Images/Def_layout.png" width=600 height=200>
+<img src="W1_Images/Def_layout.png" width=600 height=200>
 
 Say we are interested in saving a configuration consisting of additional displays such as LaserScan as well as a different camera type. How do we accomplish that ?
 
 1. Add the required displays and change the camera type
 
-<img src="Images/New_layout.png" width=600 height=250>
+<img src="W1_Images/New_layout.png" width=600 height=250>
 
 2. To save the configuration,
 
@@ -185,7 +185,7 @@ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 
 Upon execution, the following screen should be visible.
 
-<img src="Images/Bot_Empty.png" width=300 height=200>
+<img src="W1_Images/Bot_Empty.png" width=300 height=200>
 
 Alternatively, to summon the bot in the **standard environment** in  **Gazebo**, execute the following command.
 
@@ -195,7 +195,7 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 
 Upon execution, the following screen should be visible.
 
-<img src="Images/Bot_Standard.png" width=400 height=400>
+<img src="W1_Images/Bot_Standard.png" width=400 height=400>
 
 ## Visualizing in Rviz
 
@@ -207,7 +207,7 @@ roslaunch turtlebot3_gazebo turtlebot3_gazebo_rviz.launch
 
 If the bot is in the standard world, you should be able to see the **point cloud** representing the objects detected by the bot. Amazing !
 
-<img src="Images/Bot_rviz.png" width=400 height=350>
+<img src="W1_Images/Bot_rviz.png" width=400 height=350>
 
 
 ## Moving the bot around
@@ -451,22 +451,22 @@ On executing ```roslaunch epi1 2bots.launch```, you should be able to see two bo
 We would like to save a configuration beforehand that will enable us to view the bots and the laser scan data conveniently.
 
 1. Change the **Fixed Frame** to ```odom```
-<img src="Images/Odom_fixedframe.png" width=350 height=200>
+<img src="W1_Images/Odom_fixedframe.png" width=350 height=200>
 
 2. Change the angle to approximately -1.57 (this is optional)
-<img src="Images/ChangeAngle.png" width=150 height=200>
+<img src="W1_Images/ChangeAngle.png" width=150 height=200>
 
 3. Add a **Robot Model** and rename it as **Sherlock**. Change the **Robot Description** to **sherlock/robot_description** and **TF Prefix** to **sherlock**
-<img src="Images/Sherlock_RobotModel.png" width=250 height=400>
+<img src="W1_Images/Sherlock_RobotModel.png" width=250 height=400>
 
 4. Similarly, add another **Robot Model** and rename it as **Watson**. Change the **Robot Description** to **watson/robot_description** and **TF Prefix** to **watson**
-<img src="Images/Watson_RobotModel.png" width=200 height=150>
+<img src="W1_Images/Watson_RobotModel.png" width=200 height=150>
 
 5. Add a **Laser Scan** and rename it as **Sherlock_Laser Scan**. Change the **Topic** to **sherlock/scan**
-<img src="Images/Sherlock_LaserScan.png" width=200 height=150>
+<img src="W1_Images/Sherlock_LaserScan.png" width=200 height=150>
 
 6. Add a **Laser Scan** and rename it as **Watson_Laser Scan**. Change the **Topic** to **watson/scan**
-<img src="Images/Watson_LaserScan.png" width=200 height=150>
+<img src="W1_Images/Watson_LaserScan.png" width=200 height=150>
 
 After making the above changes, save the configuration as ```2bots.rviz``` in the ```configs``` folder of ```epi1```
 
@@ -541,7 +541,7 @@ Adding  ``` <node name="rviz" pkg="rviz" type="rviz" args="-d $(find epi1)/confi
 
 On executing ```roslaunch epi1 2bots.launch```, you should be able to see the Sherlock and Watson bots beside each other in Rviz as well. Lovely!
 
-<img src="Images/2bots_rviz.png" width=400 height=400>
+<img src="W1_Images/2bots_rviz.png" width=400 height=400>
 
 ## Way ahead
 
