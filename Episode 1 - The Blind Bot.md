@@ -5,7 +5,7 @@
 If you have gone through the content of Week 0 and tried the problem, you should be familiar with the basic ideas of ROS. In addition, you should be capable of creating a simple publisher and a subscriber. If so, you are ready to face what is about to come your way. In this episode, you will see how to work in **Gazebo** and **Rviz**. 
 
 
-<img src="W1_Images/Gazebo.jpg" width=320 height=150> <img src="Images/Rviz.png" width=320 height=240>
+<img src="W1_Images/Gazebo.jpg" width=320 height=150> <img src="W1_Images/Rviz.png" width=320 height=240>
 
 You will also get to play with the **TurtleBot3** in Gazebo and see the working of its sensors in Rviz.
 
@@ -442,7 +442,7 @@ Add the following code to the file.
 ```
 On executing ```roslaunch epi1 2bots.launch```, you should be able to see two bots, **Sherlock (the Waffle model)** and **Watson (the Burger model)** in Gazebo.
 
-<img src="Images/2bots_gazebo.png" width=400 height=400>
+<img src="W1_Images/2bots_gazebo.png" width=400 height=400>
 
 ## Visualizing Multiple bots in Rviz
 
