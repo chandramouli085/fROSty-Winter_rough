@@ -44,13 +44,15 @@ Welcome to Gazebo !
 
 ### Basic features
 
-**Optional Reading**-[Understanding the GUI](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2)
+Refer to the following link to know about the basic GUI features of Gazebo.
+
+[Understanding the GUI](http://gazebosim.org/tutorials?cat=guided_b&tut=guided_b2)
 
 ### Create a World in Gazebo
 
 ### Saving and Loading worlds
 
-**Optional Reading**-[Building a world](http://gazebosim.org/tutorials?tut=build_world)
+**Optional Reading**-[Building a world](http://gazebosim.org/tutorials?cat=build_world)
 
 ### Starting Gazebo with Launch files
 
