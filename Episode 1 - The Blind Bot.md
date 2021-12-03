@@ -245,6 +245,8 @@ We are able to see some of the important topics such as ```/cmd_vel``` and ```/s
 
 Launch the **Waffle** model of TurtleBot3 in Gazebo and look at the topics. Anything surprising ? Are you able to figure out a connection with the title of the episode ?
 
+<img src="W1_Images/Sherlock_moving.gif">
+
 ## Moving the bot around
 
 Let's move the bot around in the standard world in Gazebo using the ```turtlebot3_teleop``` package
