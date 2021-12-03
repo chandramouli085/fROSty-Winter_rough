@@ -386,6 +386,8 @@ At this point, the bot must be feeling lonely roaming all by itself. Let us brin
 
 Take a look at the code in ```turtlebot3_world.launch```, ```turtlebot3_gazebo_rviz.launch``` and ```turtlebot3_remote.launch```. It will be helpful for the upcoming sections as the commands in these files will be used more or less directly with slight modification to launch the bots.
 
+<img src="W1_Images/Sherlock_moving_2.gif">
+
 To view the code in ```turtlebot3_world.launch```, execute the following commands one after another
 
 ```
