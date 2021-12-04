@@ -160,7 +160,8 @@ TurtleBot3 comes in 3 different models - Burger, Waffle and Waffle-Pi
 To install the TurtleBot3, execute the following command
 
 ```
-sudo apt-get install ros-<ROS Version>-turtlebot3
+sudo apt-get install ros-<ROS Version>-turtlebot3 ros-<ROS Version>-turtlebot3-gazebo -y
+
 ```
 ROS Version = ```kinetic```, ```melodic```, ```noetic```
 
