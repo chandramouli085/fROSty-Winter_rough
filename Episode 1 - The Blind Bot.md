@@ -55,17 +55,17 @@ Let's look at the creation of a new simple world by creating ```wall.world```
 1. Open Gazebo
 2. Add a **Box** by selecting the Box icon in the **Upper Toolbar** and clicking on the desired location in the scene where it needs to be placed.
 
-<img src="W1_Images/Box.png">
+<img src="W1_Images/Box.png" width=500 height=250>
 
 3. Use the **Scale** tool (Shortcut - ```S```) to scale down the box along one of the axes and scale up along another axis
 
-<img src="W1_Images/Scaled_box.png">
+<img src="W1_Images/Scaled_box.png" width=500 height=250>
 
 4. Use ``` Ctrl + C``` to copy and ```Ctrl + V``` to paste and place it at the desired location.
 
 5. Use the **Translation** tool to move the sides of the wall to the desired location if needed  and **Rotate** tool to adjust their orientation. One may also use adjust the position and orientation using the pose settings as well.
 
-<img src="">
+<img src="W1_Images/Pose_settings.png" width=250 height=300>
 
 The wall has been created.
 
