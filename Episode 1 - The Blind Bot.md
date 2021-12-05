@@ -94,7 +94,9 @@ To load the world,
 
 1. One way to modify the world just created is to open the world in Gazebo, make the necessary changes and overwrite the existing world file by re-saving in the same fashion as described in the previous section.
 
-2. Another way to modify the world is by modifying the **sdf/world file** generated. Let us look at an example by changing the colour of the walls to Yellow and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
+2. Another way to modify the world is by modifying the **sdf/world file** generated. 
+
+Let us look at an example by changing the colour of the walls to Yellow and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
 
 To change the color of the side of the wall named ```unit_box```,
 Under the  ```<material>``` tag below ```<model name='unit_box'>```, alter the ```<name>``` to ```Gazebo/Red```. 
