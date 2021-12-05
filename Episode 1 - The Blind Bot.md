@@ -50,11 +50,44 @@ Refer to the following link to know about the basic GUI features of Gazebo.
 
 ### Create a World in Gazebo
 
+**Note** - One way to modify the world just created is to resave...
+
 ### Saving and Loading worlds
 
+To save the world,
+
+    1) Go to **File > Save World As (Ctrl + Shift + S)**
+  
+    2) Go to the appropriate folder (```epi1 > worlds```), give an appropriate name (```custom```) and save
+    
+To load the world
+    1) ```cd``` to the directory containing the world file ('''worlds''' in this case) in the terminal
+  
+    2) Execute ```gazebo ```
+    
 **Optional Reading**-[Building a world](http://gazebosim.org/tutorials?cat=build_world)
 
 ### Starting Gazebo with Launch files
+
+Create ```custom_gazebo.launch``` in the ```launch``` folder
+
+Add the following code to launch Gazebo with ```custom.rviz``` world
+
+```
+<launch>
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find epi1)/worlds/volcano"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+</include>
+</launch>
+
+```
+
+On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched with the desired world.
 
 ## Viziting Rviz ...
 
@@ -593,6 +626,6 @@ To know more about the TurtleBot3 and explore it various capabilities like navig
 
 Additionally, one can try writing code for publishers and subscribers in different ways apart from the prescribed style, such as using **classes**. We shall leave that up to you for exploration. Have fun.
 
-# Try it out ...
+#  ...
 
 ## Guiding a blind bot ...
