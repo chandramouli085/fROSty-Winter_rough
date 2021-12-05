@@ -50,6 +50,11 @@ Refer to the following link to know about the basic GUI features of Gazebo.
 
 ### Create a World in Gazebo
 
+Let's look at the creation of a new simple world by creating ```wall.world```
+
+1. Open Gazebo
+2. Add a **Box**  
+3. 
 **Note** - One way to modify the world just created is to resave...
 
 ### Saving and Loading worlds
