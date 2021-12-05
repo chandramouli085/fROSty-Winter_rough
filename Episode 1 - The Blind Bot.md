@@ -53,35 +53,62 @@ Refer to the following link to know about the basic GUI features of Gazebo.
 Let's look at the creation of a new simple world by creating ```wall.world```
 
 1. Open Gazebo
-2. Add a **Box**  
-3. 
-**Note** - One way to modify the world just created is to resave...
+2. Add a **Box** by selecting the Box icon in the **Upper Toolbar** and clicking on the desired location in the scene where it needs to be placed.
+
+<img src="">
+
+3. Use the **Scale** tool (Shortcut - ```S```) to scale down the box along one of the axes and scale up along another axis
+
+<img src="">
+
+4. Use ``` Ctrl + C``` to copy and ```Ctrl + V``` to paste and place it at the desired location.
+
+5. Use the **Translation** tool to move the sides of the wall to the desired location if needed  and **Rotate** tool to adjust their orientation. One may also use adjust the position and orientation using the pose settings as well.
+
+<img src="">
+
+The wall has been created.
+
+<img src="W1_Images/Wall.png" width=500 height = 250>
+
 
 ### Saving and Loading worlds
 
-To save the world,
+To save a world,
 
-    1) Go to **File > Save World As (Ctrl + Shift + S)**
+1. Go to **File > Save World As (Ctrl + Shift + S)**
   
-    2) Go to the appropriate folder (```epi1 > worlds```), give an appropriate name (```custom```) and save
-    
-To load the world
-    1) ```cd``` to the directory containing the world file ('''worlds''' in this case) in the terminal
+2. Go to the appropriate folder (```epi1 > worlds```), give an appropriate name (```wall```) and save
+ 
+ 
+To load the world,
+
+1. ```cd``` to the directory containing the world file (```worlds``` in this case) in the terminal
   
-    2) Execute ```gazebo ```
-    
+2. Execute  ```gazebo wall```
+ 
+ 
 **Optional Reading**-[Building a world](http://gazebosim.org/tutorials?cat=build_world)
+
+### Modifying worlds
+
+1. One way to modify the world just created is to open the world in Gazebo, make the necessary changes and overwrite the existing world file by re-saving in the same fashion as described in the previous section.
+
+2. Another way to modify the world is by modifying the **sdf/world file** generated. Let us look at an example by changing the colour of the walls to Yellow and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
+
+
+
 
 ### Starting Gazebo with Launch files
 
 Create ```custom_gazebo.launch``` in the ```launch``` folder
 
-Add the following code to launch Gazebo with ```custom.rviz``` world
+Add the following code to launch Gazebo with ```wall.world``` world
 
 ```
 <launch>
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find epi1)/worlds/volcano"/>
+    <arg name="world_name" value="$(find epi1)/worlds/wall"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
@@ -91,7 +118,6 @@ Add the following code to launch Gazebo with ```custom.rviz``` world
 </launch>
 
 ```
-
 On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched with the desired world.
 
 ## Viziting Rviz ...
