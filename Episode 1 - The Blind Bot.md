@@ -105,7 +105,7 @@ Perform the above step for the other sides of the wall.
 
 Save the file and load it in Gazebo. The modified world should be visible in Gazebo.
 
-<img src="W1_Images/Red_wall.png" width=500 height="250">
+<img src="W1_Images/Red_wall.png" width=600 height="300">
 
 
 
