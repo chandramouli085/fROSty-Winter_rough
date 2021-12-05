@@ -96,7 +96,7 @@ To load the world,
 
 2. Another way to modify the world is by modifying the **sdf/world file** generated. 
 
-Let us look at an example by changing the colour of the walls to Yellow and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
+Let us look at an example by changing the colour of the walls to **Red** and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
 
 To change the color of the side of the wall named ```unit_box```,
 Under the  ```<material>``` tag below ```<model name='unit_box'>```, alter the ```<name>``` to ```Gazebo/Red```. 
