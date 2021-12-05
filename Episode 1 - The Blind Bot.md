@@ -115,7 +115,7 @@ Save the file and load it in Gazebo. The modified world should be visible.
 
 Create ```custom_gazebo.launch``` in the ```launch``` folder
 
-Add the following code to launch Gazebo with ```wall.world``` world
+Add the following code to launch Gazebo with ```wall.world```
 
 ```
 <launch>
