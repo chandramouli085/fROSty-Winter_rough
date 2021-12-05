@@ -102,9 +102,9 @@ To change the color of the side of the wall named ```unit_box```, alter the ```<
 
 To make ```unit_box``` static, add ```<static> 1 </static>``` below  ```<model name='unit_box'>```
 
-Perform the above step for the other sides of the wall.
+Perform the above steps for the other sides of the wall.
 
-Save the file and load it in Gazebo. The modified world should be visible in Gazebo.
+Save the file and load it in Gazebo. The modified world should be visible.
 
 <img src="W1_Images/Red_wall.png" width=600 height="300">
 
