@@ -96,6 +96,17 @@ To load the world,
 
 2. Another way to modify the world is by modifying the **sdf/world file** generated. Let us look at an example by changing the colour of the walls to Yellow and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
 
+To change the color of the side of the wall named ```unit_box```,
+Under the  ```<material>``` tag below ```<model name='unit_box'>```, alter the ```<name>``` to ```Gazebo/Red```. 
+
+To make ```unit_box``` static, add ```<static> 1 </static>``` below  ```<model name='unit_box'>```
+
+Perform the above step for the other sides of the wall.
+
+Save the file and load it in Gazebo. The modified world should be visible in Gazebo.
+
+<img src="">
+
 
 
 
