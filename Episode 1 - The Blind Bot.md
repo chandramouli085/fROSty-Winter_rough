@@ -98,8 +98,7 @@ To load the world,
 
 Let us look at an example by changing the colour of the walls to **Red** and making the walls **static**. Navigate to the ```worlds``` folder and open the ```wall.world``` file.
 
-To change the color of the side of the wall named ```unit_box```,
-Under the  ```<material>``` tag below ```<model name='unit_box'>```, alter the ```<name>``` to ```Gazebo/Red```. 
+To change the color of the side of the wall named ```unit_box```, alter the ```<name>``` to ```Gazebo/Red``` under the  ```<material>``` tag below ```<model name='unit_box'>```, 
 
 To make ```unit_box``` static, add ```<static> 1 </static>``` below  ```<model name='unit_box'>```
 
