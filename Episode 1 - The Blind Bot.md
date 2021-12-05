@@ -63,7 +63,7 @@ Let's look at the creation of a new simple world by creating ```wall.world```
 
 4. Use ``` Ctrl + C``` to copy the side of the wall and ```Ctrl + V``` to paste and place it at the desired location.
 
-5. Use the **Translation** tool (Shortcut - ```T```) to move the sides of the wall to the desired location if needed  and **Rotate** tool (Shortcut - ```R```) to adjust their orientation. One may also use adjust the position and orientation using the pose settings as well.
+5. Use the **Translation** tool (Shortcut - ```T```) to move the sides of the wall to the desired location if needed  and **Rotate** tool (Shortcut - ```R```) to adjust their orientation. One may also adjust the position and orientation using the **pose settings** as well.
 
 <img src="W1_Images/Pose_settings.png" width=250 height=300>
 
