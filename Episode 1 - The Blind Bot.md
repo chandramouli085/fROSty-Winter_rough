@@ -55,7 +55,7 @@ Let's look at the creation of a new simple world by creating ```wall.world```
 1. Open Gazebo
 2. Add a **Box** by selecting the Box icon in the **Upper Toolbar** and clicking on the desired location in the scene where it needs to be placed.
 
-<img src="W1_Images/Box.png" width=500 height=250>
+<img src="W1_Images/Box.png" width=500 height=300>
 
 3. Use the **Scale** tool (Shortcut - ```S```) to scale down the box along one of the axes and scale up along another axis
 
