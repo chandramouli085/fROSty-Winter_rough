@@ -13,11 +13,19 @@ You will also get to play with the **TurtleBot3** in Gazebo and see the working 
 
 Let's begin !
 
+## Table of Contents
+
+<ol>
+  <li><a href="#Gazebo">Gaze at Gazebo ...</a></li>
+  <li><a href="#Rviz">Viziting Rviz ...</a></li>
+  <li><a href="#Turtlebot3">The TurtleBot3 emerges ...</a></li>
+</ol>
+
 ## Initial preparation
 
 Create a package ```epi1``` in ```catkin_ws```, with ```scripts```,```launch```, ```worlds``` and ```configs``` folders. This will be required for storing the various files that will be created throughout.
 
-## Gaze at Gazebo ...
+## Gaze at Gazebo ... <a name="Gazebo"></a>
 
 
 ### What is it ?
@@ -132,7 +140,7 @@ Add the following code to launch Gazebo with ```wall.world```
 ```
 On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched with the desired world.
 
-## Viziting Rviz ...
+## Viziting Rviz ... <a name="Rviz"></a>
 
 ### What is it ?
 
@@ -225,7 +233,7 @@ Add the following code to launch Rviz with ```custom.rviz``` configuration
 
 On executing  ```roslaunch epi1 custom_rviz.launch```, Rviz will be launched with the desired configuration.
 
-## The TurtleBot3 emerges ...
+## The TurtleBot3 emerges ... <a name="Turtlebot3"></a>
 
 TurtleBot3 is the third version of the TurtleBot, which is a ROS standard platform robot for use in education and research. It is available in hardware form as well as in a simulated format. We shall be using the simulated format obviously.
 
@@ -236,7 +244,7 @@ TurtleBot3 comes in 3 different models - Burger, Waffle and Waffle-Pi
 To install the TurtleBot3, execute the following command
 
 ```
-sudo apt-get install ros-<ROS Version>-turtlebot3*
+sudo apt-get install ros-<ROS Version>-turtlebot3-*
 
 ```
 ROS Version = ```melodic```, ```noetic```
@@ -669,6 +677,9 @@ To know more about the TurtleBot3 and explore it various capabilities like navig
 
 Additionally, one can try writing code for publishers and subscribers in different ways apart from the prescribed style, such as using **classes**. We shall leave that up to you for exploration. Have fun.
 
-#  ...
+# Task  ...
 
-## Guiding a blind bot ...
+Code to avoid walls in front of it
+The robot moves forward until it detects an obstacle in front of it which is closer than 1 meter, so it begins to turn left in order to avoid it. The robot keeps turning left and moving forward until it detects that it has an obstacle at the right side which is closer than 1 meter, so it stops and turns left in order to avoid it.
+
+
