@@ -679,7 +679,14 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Task  ...
 
-Code to avoid walls in front of it
-The robot moves forward until it detects an obstacle in front of it which is closer than 1 meter, so it begins to turn left in order to avoid it. The robot keeps turning left and moving forward until it detects that it has an obstacle at the right side which is closer than 1 meter, so it stops and turns left in order to avoid it.
+## Part 1
+
+Destination - ```turtlebot3_house.world``` 
+
+<img src="" width="" height="">
+
+Let's enable the turtlebot to move around without colliding with walls (for the most part atleast :P).
+
+Write the code for a node responsible for moving the bot forward until it detects an obstacle in front of it which is closer than 1 meter. On detecting an obstacle at a distance less than 1 meter in front of it, the robot begins turning to its left, until it detects that the obstacle is to its right at less than 1 meter. Once the obstacle is detected to its right at less than 1 meter and the forward direction is clear, it moves forward
 
 
