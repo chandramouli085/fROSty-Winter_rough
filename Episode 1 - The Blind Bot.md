@@ -679,15 +679,17 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Task  
 
-## Part 1
+## A change of scenery...
 
 Destination - ```turtlebot3_house.world``` 
 
-<img src="" width="" height="">
+<img src="W1_Images/House.png" width="400" height="200">
 
-Let's enable the **TurtleBot-3 (Burger model)** to move around without colliding with walls (for the most part atleast :P).
+Let's enable the **TurtleBot-3 (Burger model)** to move around without colliding with the walls (for the most part atleast :P).
 
-Write the code for a node responsible for **moving** the bot forward until it **detects** an obstacle in front of it which is closer than 1 meter. On detecting, the robot begins turning to its **left**, until it detects that the obstacle is to its right at less than 1 meter. Once the obstacle is detected to its **right** and no obstacles are present within 1 meter in front of the bot, it moves forward.
+Create a node ```Obstacle avoider``` responsible for **moving** the bot forward at a certain speed (say 0.1 units/s) until it **detects** an obstacle at a certain distance (say 1 unit) in front of it. On detecting an obstacle, the bot begins turning to its **left** until there there are no obstacles in front of it within a certain distance.
+
+**Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world``` and improve upon the algorithm over time.
 
 Have fun!
 
