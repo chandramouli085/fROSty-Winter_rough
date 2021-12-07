@@ -679,15 +679,16 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Let's play a game, shall we ... 
 
-**Sherlock** and **Watson** are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them.
+**Sherlock** and **Watson** are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them. You, the observer will be able to view the bots and what they detect through **Rviz** 
 
 ## Steps
 1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
-2. Download the ```arena.world```,```escape.launch```, ```2bots.rviz```
+2. Download the ```arena.world```,```escape.launch```, ```2bots.rviz``` and add them to the ```worlds```,```launch``` and ```configs``` folder respectively.
 3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
-4. Launch ```escape.launch``` after making the valid modifications
-5. The bots will explore the room while avoiding obstacles. In this process, clues will be uncovered.
-6. Using the clues, determine the code.
+4. Launch ```escape.launch``` after making the valid modifications to the launch file
+5. The bots will explore the room while avoiding obstacles. In this process, clues will be uncovered which you can observe and infer from.
+6. From the inferences, determine the code.
+7. Type the code in the terminal. If correct, ...
 
 **Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world``` and improve upon the algorithm over time.
 
