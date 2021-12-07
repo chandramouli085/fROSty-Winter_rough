@@ -683,7 +683,7 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 ## Steps
 1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
-2. Download the ```arena.world```,```escape.launch```, ```2bots.rviz``` and add them to the ```worlds```,```launch``` and ```configs``` folder respectively.
+2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` and add them to the ```worlds```,```launch``` and ```configs``` folder respectively.
 3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
 4. Launch ```escape.launch``` after making the valid modifications to the launch file
 5. The bots will explore the room while avoiding obstacles. In this process, clues will be uncovered which you can observe and infer from.
