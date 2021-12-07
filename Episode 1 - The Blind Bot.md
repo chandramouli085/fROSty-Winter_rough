@@ -699,6 +699,14 @@ Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task
 
 Sherlock and Watson are trapped in a room and there doesn't seem to be a way out unless the code to exit the room is figured out.
 
+World file 
+Use the launch file ```escape.launch```.
+
+1. Create an appropriate configuration for viewing the bots and the room and save it in the ```configs``` folder
+
+2. Create a node to make Sherlock move as well
+
+Escape code - Area of the arena
 
 Have fun!
 
