@@ -685,14 +685,16 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 ## Steps
 1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
-2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` and add them to the ```worlds```,```launch``` and ```configs``` folder respectively.
+2. Download the ```arena.world```,```escape.launch```, ```observe.rviz``` from the link below and add them to the ```worlds```,```launch``` and ```configs``` folder respectively. **DO NOT** modify these files.
+[Files]()
 3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
 4. Launch ```escape.launch```
 5. The bots will begin exploring the room while avoiding obstacles. In this process, clues will be uncovered which you can observe and infer from.
 6. From the inferences, determine the code.
-7. Type the code in the terminal. If correct, ...
+7. The code is the password for the password-protected PDF file. Type the password and see what will happen!
 
 **Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world``` and improve upon the algorithm over time.
 
 Have fun!
+
 
