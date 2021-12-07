@@ -677,20 +677,28 @@ To know more about the TurtleBot3 and explore it various capabilities like navig
 
 Additionally, one can try writing code for publishers and subscribers in different ways apart from the prescribed style, such as using **classes**. We shall leave that up to you for exploration. Have fun.
 
-# Task  
+# Let's play a game, shall we ... 
 
-## A change of scenery...
+## Preliminary preparation
+
+Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
+
+## Part 1 ...
 
 Destination - ```turtlebot3_house.world``` 
 
 <img src="W1_Images/House.png" width="400" height="200">
 
-Let's enable the **TurtleBot-3 (Burger model)** to move around without colliding with the walls (for the most part atleast :P).
+Let's enable the **TurtleBot-3 (Burger model)** to move around without colliding with the walls in the above world (for the most part atleast :P).
 
-Create a node ```Obstacle avoider``` responsible for **moving** the bot forward at a certain speed (say 0.1 units/s) until it **detects** an obstacle at a certain distance (say 1 unit) in front of it. On detecting an obstacle, the bot begins turning to its **left** until there there are no obstacles in front of it within a certain distance.
+Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **moving** the bot forward at a certain speed (say 0.1 units/s) until it **detects** an obstacle at a certain distance (say 1 unit) in front of it. On detecting an obstacle, the bot begins turning to its **left** until there there are no obstacles in front of it within a certain distance.
 
 **Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world``` and improve upon the algorithm over time.
 
-Have fun!
+## Part 2 ...
 
+Sherlock and Watson are trapped in a room and there doesn't seem to be a way out unless the code to exit the room is figured out.
+
+
+Have fun!
 
