@@ -679,36 +679,17 @@ Additionally, one can try writing code for publishers and subscribers in differe
 
 # Let's play a game, shall we ... 
 
-## Preliminary preparation
+**Sherlock** and **Watson** are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. They need to **explore the room autonomously** and find clues which will help them determine the code. As they explore, they should make sure to **avoid colliding with objects** around them.
 
-Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
-
-## Part 1 ...
-
-Destination - ```turtlebot3_house.world``` 
-
-<img src="W1_Images/House.png" width="400" height="200">
-
-Let's enable the **TurtleBot-3 (Burger model)** to move around without colliding with the walls in the above world (for the most part atleast :P).
-
-Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **moving** the bot forward at a certain speed (say 0.1 units/s) until it **detects** an obstacle at a certain distance (say 1 unit) in front of it. On detecting an obstacle, the bot begins turning to its **left** until there there are no obstacles in front of it within a certain distance.
+## Steps
+1. Create a package ```task_1``` with ```scripts```,```launch```,```worlds``` and ```configs``` folders.
+2. Download the ```arena.world```,```escape.launch```, ```2bots.rviz```
+3. Create a node file ```bot_avoidance.py``` in the ```scripts``` folder of ```task_1``` package, which will be responsible for **obstacle avoidance and exploration** of the room. Both Sherlock and Watson will be operated using the same script.
+4. Launch ```escape.launch``` after making the valid modifications
+5. The bots will explore the room while avoiding obstacles. In this process, clues will be uncovered.
+6. Using the clues, determine the code.
 
 **Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world``` and improve upon the algorithm over time.
-
-## Part 2 ...
-
-Sherlock and Watson are trapped in a room and there doesn't seem to be a way out unless the code to escape the room is figured out. 
-
-Watson can only follow Sherlock.
-
-World file 
-Use the launch file ```escape.launch```.
-
-1. Create an appropriate configuration for viewing the bots and the room and save it in the ```configs``` folder of ```task_1``` .
-
-Create additional nodes if required.
-
-Using the clues, figure out the escape code
 
 Have fun!
 
