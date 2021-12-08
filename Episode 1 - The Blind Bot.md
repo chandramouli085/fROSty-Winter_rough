@@ -169,7 +169,21 @@ If you want to spawn the models when launching gazebo world. Add the following c
 ```
 These lines in the launch file do both jobs, converting xacro to urdf and spawning the urdf to gazebo.
 Now execute ```roslaunch epi1 custom_gazebo.launch``` to launch world and spawn the model into it.
+  
+### Adding Plugins to models
+  
+If you want to communicate with models, for example send velocity data to robots or obtain camera feed from a camera in gazebo, you need to add plugins to models. Let's add a plugin to the robot_car so that you acn move it. This plugin will allow you to send velocities to the robot_car model.
+  
+Download the ```robot_car.gazebo``` file and place it in the ```robot_car``` folder.
+Uncomment the line ```<xacro:include filename="$(find epi1)/models/robot_car/robot_car.gazebo" />``` in ```robot_car.xacro``` file that you downloaded earlier. 
 
+The ```robot_car.gazebo``` contains the ```differential_drive_controller``` plugin which you added to the ```robot_car``` model by uncommenting the line above.
+
+Now the launch the gazebo world using ```roslaunch epi1 custom_gazebo.launch```. You will see ```gazebo``` node subscribed to ```cmd_vel``` since we added the plugin.
+  
+To publish on ```cmd_vel``` topic execute ```rosrun teleop_twist_keyboard teleop_twist_keyboard.py```. Use the keys i,j,l and k to move the ```robot_car``` model.
+
+If teleop_twist_keyboard is not installed- execute ```sudo apt-get install ros-noetic-teleop-twist-keyboard``` for ROS noetic.
 
 ## Viziting Rviz ... <a name="Rviz"></a>
 
