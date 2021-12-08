@@ -154,9 +154,21 @@ Open the terminal in the ```robot_car``` folder and execute the command ```xacro
 
 Now you can launch the world using the ```roslaunch epi1 custom_gazebo.launch``` like ealier.
 
-To spawn this model into the above launched world, open the terminal in ```robot_car``` and execute the command ```rosrun gazebo_ros spawn_model -file `pwd`/robot_car.urdf -urdf -z 1 -model robot_car```. You will be able to see this model in the Gazebo GUI.
+To spawn this model into the above launched world, open the terminal in ```robot_car``` folder and execute the command ```rosrun gazebo_ros spawn_model -file `pwd`/robot_car.urdf -urdf -z 1 -model robot_car```. You will be able to see this model in the Gazebo GUI.
 
 #### Spawning models using launch file
+
+If you want to spawn the models when launch gazebo. Add the following code to the launch file ( outside the <include> tag but inside the <launch> tag)
+```
+  <!-- This command builds the urdf files from the xacro files by calling the launch file -->
+  <param name="robot_car_description" command="$(find xacro)/xacro --inorder '$(find epi1)/models/robot_car/robot_car.xacro'"/>
+  
+  <!-- Spawn the robot after we built the urdf files -->
+  <node name="robot__car_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -param robot_car_description -model robot_car" />
+```
+These lines in the launch file do both jobs, converting xacro to urdf and spawning the urdf to gazebo.
+Now execute ```roslaunch epi1 custom_gazebo.launch``` to launch world and spawn the model into it.
 
 
 ## Viziting Rviz ... <a name="Rviz"></a>
