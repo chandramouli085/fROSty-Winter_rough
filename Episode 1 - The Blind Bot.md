@@ -146,11 +146,18 @@ On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched
 
 Create ```models``` folder inside the ```epi1``` package. You need to make one folder for each model you want.
 
-Let's make a simple robot car model. Make a folder named ```robot_car``` inside the ```models``` folder. Create a URDF file named ```robot_car.xacro```.
+Let's make a simple robot car model. Make a folder named ```robot_car``` inside the ```models``` folder. Download the xacro file ```robot_car.xacro``` and place it in the ```robot_car``` folder. This file describes the robot car model in a macro language called xacro.
 
-```
+Now we need to convert it to URDF before spawning it in gazebo.
 
-```
+Open the terminal in the ```robot_car``` folder and execute the command ```xacro robot_car.xacro > robot_car.urdf```. This command will create the file ```robot_car.urdf``` in the same folder. 
+
+Now you can launch the world using the ```roslaunch epi1 custom_gazebo.launch``` like ealier.
+
+To spawn this model into the above launched world, open the terminal in ```robot_car``` and execute the command ```rosrun gazebo_ros spawn_model -file `pwd`/robot_car.urdf -urdf -z 1 -model robot_car```. You will be able to see this model in the Gazebo GUI.
+
+#### Spawning models using launch file
+
 
 ## Viziting Rviz ... <a name="Rviz"></a>
 
