@@ -2,7 +2,7 @@
 
 
 <robot name="robot_car" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <xacro:include filename="$(find epi1)/models/robot_car/robot_car.gazebo" />
+<!--   <xacro:include filename="$(find epi1)/models/robot_car/robot_car.gazebo" /> -->
   
   <gazebo reference="base_link">
     <material>Gazebo/Orange</material>
