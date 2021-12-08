@@ -693,7 +693,7 @@ Additionally, one can try writing code for publishers and subscribers in differe
 6. From the inferences, determine the code.
 7. The code is the password for the password-protected PDF file. Type the password and see what will happen!
 
-**Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world``` and improve upon the algorithm over time.
+**Note** - Start with a simple algorithm for avoiding obstacles. A simple implementation might not be perfect in avoiding all kinds of obstacles since the obstacles can be all shapes and orientations. Experiment, test in different environments like ```wall.world```, ```turtlebot3_world.world```, ```turtlebot3_house.world``` and improve upon the algorithm over time.
 
 Have fun!
 
