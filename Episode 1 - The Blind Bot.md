@@ -140,6 +140,18 @@ Add the following code to launch Gazebo with ```wall.world```
 ```
 On executing  ```roslaunch epi1 custom_gazebo.launch```, Gazebo will be launched with the desired world.
 
+## Additional Material
+
+### Adding models to world
+
+Create ```models``` folder inside the ```epi1``` package. You need to make one folder for each model you want.
+
+Let's make a simple robot car model. Make a folder named ```robot_car``` inside the ```models``` folder. Create a URDF file named ```robot_car.xacro```.
+
+```
+
+```
+
 ## Viziting Rviz ... <a name="Rviz"></a>
 
 ### What is it ?
