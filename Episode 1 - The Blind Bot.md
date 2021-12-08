@@ -158,7 +158,7 @@ To spawn this model into the above launched world, open the terminal in ```robot
 
 #### Spawning models using launch file
 
-If you want to spawn the models when launch gazebo. Add the following code to the launch file ( outside the <include> tag but inside the <launch> tag)
+If you want to spawn the models when launching gazebo world. Add the following code to the launch file ( outside the <include> tag but inside the <launch> tag)
 ```
   <!-- This command builds the urdf files from the xacro files by calling the launch file -->
   <param name="robot_car_description" command="$(find xacro)/xacro --inorder '$(find epi1)/models/robot_car/robot_car.xacro'"/>
