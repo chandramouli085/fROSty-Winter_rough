@@ -164,7 +164,7 @@ If you want to spawn the models when launching gazebo world. Add the following c
   <param name="robot_car_description" command="$(find xacro)/xacro --inorder '$(find epi1)/models/robot_car/robot_car.xacro'"/>
   
   <!-- Spawn the robot after we built the urdf files -->
-  <node name="robot__car_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+  <node name="robot_car_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
    args="-urdf -param robot_car_description -model robot_car" />
 ```
 These lines in the launch file do both jobs, converting xacro to urdf and spawning the urdf to gazebo.
